@@ -1,0 +1,27 @@
+version: '0.0.{build}'
+
+image: Visual Studio 2017
+
+init:
+  - ps: >-
+      if($env:appveyor_repo_tag -eq 'True') {
+        Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v"))"
+      }
+
+configuration:
+  - Release
+
+environment:
+  matrix:
+  - arch: x86_64
+    platform: x64
+    visual_studio: Visual Studio 15 2017 Win64
+
+install:
+  - set PATH=%PATH%;%PYTHON%/Scripts/
+  - node --version
+  - npm --version
+
+build_script:
+  - npm install --no-audit
+  - npm run test
