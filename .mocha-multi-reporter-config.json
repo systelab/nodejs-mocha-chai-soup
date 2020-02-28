@@ -1,0 +1,8 @@
+
+{
+    "reporterEnabled": "spec,mocha-junit-reporter",
+    "mochaJunitReporterReporterOptions": {
+        "mochaFile": "report/SOUP_test_report.xml",
+        "jenkinsMode": true
+    }
+}

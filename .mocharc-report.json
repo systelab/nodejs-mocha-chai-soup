@@ -1,0 +1,13 @@
+{
+    "diff": true,
+    "extension": ["ts"],
+    "package": "./package.json",
+    "reporter": "mocha-multi-reporters",
+    "reporterOptions": {
+        "configFile": ".mocha-multi-reporter-config.json"
+    },
+    "slow": 10000,
+    "spec": "specs/**/*.spec.ts",
+    "timeout": 600000,
+    "ui": "bdd"
+}

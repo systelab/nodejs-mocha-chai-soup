@@ -23,5 +23,5 @@ install:
   - npm --version
 
 build_script:
-  - npm install --no-audit
+  - npm install
   - npm run test
