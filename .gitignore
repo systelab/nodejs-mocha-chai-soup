@@ -1,2 +1,4 @@
-node_modules
 bin/SeedCpp.db
+node_modules
+report
+
