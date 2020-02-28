@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0420" tests="6" failures="2" skipped="1">
+  <testsuite name="" timestamp="2020-02-28T12:06:08" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Root Suite.Login" timestamp="2020-02-28T12:06:08" tests="4" file="C:\GitHub\nodejs-mocha-chai-soup\specs\login.spec.ts" time="0.0220" failures="1">
+    <testcase name="should succeed when credentials are valid (PASS)" time="0.0170" classname="Login">
+    </testcase>
+    <testcase name="should succeed when credentials for another user are valid (FAIL)" time="0.0030" classname="Login">
+      <failure message="expected 401 to equal 200" type="AssertionError"><![CDATA[AssertionError: expected 401 to equal 200
+    at Function.RESTAPI.expectStatus (rest-api\rest-api.util.ts:57:39)
+    at C:\GitHub\nodejs-mocha-chai-soup\specs\login.spec.ts:53:17
+    at step (specs\login.spec.ts:33:23)
+    at Object.next (specs\login.spec.ts:14:53)
+    at fulfilled (specs\login.spec.ts:5:58)
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]></failure>
+    </testcase>
+    <testcase name="should fail when given user does not exist (PASS)" time="0.0020" classname="Login">
+    </testcase>
+  </testsuite>
+  <testsuite name="Root Suite.Patients" timestamp="2020-02-28T12:06:08" tests="2" file="C:\GitHub\nodejs-mocha-chai-soup\specs\patients.spec.ts" time="0.0200" failures="1">
+    <testcase name="should create a patient (PASS)" time="0.0180" classname="Patients">
+    </testcase>
+    <testcase name="should create another patient (FAIL)" time="0.0020" classname="Patients">
+      <failure message="expected 400 to equal 201" type="AssertionError"><![CDATA[AssertionError: expected 400 to equal 201
+    at Function.RESTAPI.expectStatus (rest-api\rest-api.util.ts:57:39)
+    at C:\GitHub\nodejs-mocha-chai-soup\specs\patients.spec.ts:62:17
+    at step (specs\patients.spec.ts:33:23)
+    at Object.next (specs\patients.spec.ts:14:53)
+    at fulfilled (specs\patients.spec.ts:5:58)
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
