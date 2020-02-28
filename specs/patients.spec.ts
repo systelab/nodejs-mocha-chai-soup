@@ -22,7 +22,7 @@ describe('Patients', async () =>
         app.close();
     });
 
-    it('should create a patient', async() =>
+    it('should create a patient (PASS)', async() =>
     {
         const requestBody =
         {
@@ -54,4 +54,12 @@ describe('Patients', async () =>
         };
         RESTAPI.expectBodyExcludingMembers(response, expectedBody, ["id"]);
     });
+
+    it('should create another patient (FAIL)', async() =>
+    {
+        const requestBody = {};
+        const response: Response = await api.sendPOSTRequest(SeedCppRestApi.PATIENTS_PATIENT, requestBody);
+        RESTAPI.expectStatus(response, StatusCode.CREATED);
+    });
+
 });
